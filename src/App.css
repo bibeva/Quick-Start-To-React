@@ -1,38 +1,66 @@
-.App {
+button,
+input[type="submit"] {
+  background: rgb(49, 130, 252);
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 7px 15px;
+  height: 35px;
+  cursor: pointer;
+  transition: background 0.3s linear;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: rgb(7, 99, 238);
+}
+
+input[type="text"],
+input[type="password"] {
+  background: #eee;
+  border: 2px solid #fff;
+  padding: 15px;
+  height: 35px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+}
+
+h2,
+p {
+  margin: 0 0 25px;
+}
+
+.box {
+  box-shadow: 0 0 65px 0px rgb(0 0 0 / 10%);
+  margin: 40px auto;
+  max-width: 500px;
+  background: #fff;
+  padding: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box .image {
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box form {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.box ul {
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* addStyle.js */
+p.large {
+  font-size: 18px;
 }

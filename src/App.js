@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import { useState } from "react"
+
 import './App.css';
 
+import CreateAndUseComponent from './components/createAndUseComponent';
+import ConditionalRendering from './components/conditionalRendering';
+import RenderingLists from './components/renderingLists';
+import RespondToEvent from './components/respondToEvent';
+import UseState from './components/useState';
+
 function App() {
+  const [count, setCount] = useState(10);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CreateAndUseComponent />
+      <ConditionalRendering />
+      <RenderingLists />
+      <RespondToEvent />
+      <UseState count={count} onClick={handleClick} />
+      <UseState count={count} onClick={handleClick} />
     </div>
   );
 }
